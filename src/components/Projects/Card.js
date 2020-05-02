@@ -8,7 +8,6 @@ const ProjectCard = styled.div`
     width: 95%;
     margin: 5px;
     padding: 5px;
-
     font-size: 2vh;
 `
 
