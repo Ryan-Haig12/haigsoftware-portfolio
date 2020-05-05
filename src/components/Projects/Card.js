@@ -5,14 +5,13 @@ import { Header, Grid, Divider } from 'semantic-ui-react'
 const ProjectCard = styled.div`
     background: #b8dbff;
     height: 80vh;
-    width: 95%;
     margin: 5px;
     padding: 5px;
     font-size: 2vh;
 `
 
 const Card = ({ data }) => {
-    const { image, appName, desc, features, challanges, techUsed, herokuLink, githubLink, note } = data
+    const { image, appName, desc, features, challenges, techUsed, herokuLink, githubLink, note } = data
     
     return (
         <ProjectCard className="ui center aligned container" style={{ width: '95%' }} >
@@ -23,7 +22,7 @@ const Card = ({ data }) => {
                     { image !== undefined && <img
                         src={ image }
                         alt={ image }
-                        style={{ float: 'left', width: '33%', marginTop: '1vh', marginLeft: '5px' }}
+                        style={{ float: 'left', width: '33%', marginTop: '1vh', marginLeft: '5px', border: '5px solid black', margin: '20px' }}
                     /> }
 
                     <React.Fragment>
@@ -49,8 +48,8 @@ const Card = ({ data }) => {
                 </Grid.Column>
 
                 <Grid.Column width={ 8 }>
-                    <Header as='h3'>Challanges</Header>
-                    <p>{ challanges }</p>
+                    <Header as='h3'>Challenges</Header>
+                    <p>{ challenges }</p>
                 </Grid.Column>
 
                 <Grid.Column width={ 3 }>
@@ -68,8 +67,8 @@ const Card = ({ data }) => {
             <Divider />
 
             { note !== undefined && <h3>See Goals-www or Goals-GraphQL above for code</h3> }
-            { herokuLink !== undefined && <h3><a href={ herokuLink }>{ herokuLink }</a></h3> }
-            { githubLink !== undefined && <h3><a href={ githubLink }>{ githubLink }</a></h3> }
+            { herokuLink !== undefined && <h3><a href={ herokuLink }>View App in Browser</a></h3> }
+            { githubLink !== undefined && <h3><a href={ githubLink }>View Code on Github</a></h3> }
         </ProjectCard>
     )
 }
