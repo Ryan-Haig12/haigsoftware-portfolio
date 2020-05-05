@@ -11,7 +11,6 @@ const App = () => {
   return (
     <div className="App" >
       <img className="Denver-Skyline" src={ "/img/denver-cut.jpg" } alt={ 'denverSkyline' } />
-      <Bio />
       <Title />
       <Skills />
       <Projects />

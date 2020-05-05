@@ -23,6 +23,19 @@ const Skills = () => {
         <div style={{ background: '#b8dbff', margin: '5px' }}>
             <Reveal style={{ width: '70%' }} >
                 <Segment className="ui center aligned container"  style={{ background: '#5eaeff' }} >
+
+                    <Grid columns={1} relaxed='very' >
+                        <Grid.Column>
+                            <Flip left cascade>
+                                <Box>
+                                    <h1 style={{ fontSize: '5vh' }}>Hello!</h1>
+                                    <p>My name is Ryan Haig. I am an aspiring Javascript based Full Stack Web Developer based out of Denver, Colorado.</p>
+                                    <p>My first QA/Tester has come to an end and I am ready and eager to begin my Developing career.</p>
+                                </Box>
+                            </Flip>
+                        </Grid.Column>
+                    </Grid>
+
                     <Grid columns={1} relaxed='very' >
                         <Grid.Column>
                             <Flip left cascade>

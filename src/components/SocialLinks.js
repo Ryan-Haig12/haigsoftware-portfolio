@@ -6,7 +6,7 @@ import resume from '../pdf/resume.pdf'
 
 const StyledLinks = styled.div`
     position: absolute;
-    top: 20vh;
+    top: 15vh;
     left: 32vh;
     padding: 5px;
 `

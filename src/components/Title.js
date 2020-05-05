@@ -6,7 +6,7 @@ import SocialLinks from './SocialLinks'
 const StyledTitle = styled.span`
     font-size: 10vh;
     position: absolute;
-    top: 15vh;
+    top: 10vh;
     left: 10vh;
 
     color: white;
