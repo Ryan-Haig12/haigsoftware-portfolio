@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './App.css'
-import Bio from './components/Bio'
+//import Bio from './components/Bio'
 //import Footer from './components/Footer'
 import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
