@@ -10,6 +10,7 @@ const ProjectCard = styled.div`
     padding: 5px;
     font-size: 2vh;
     border-radius: 5px;
+    border: 1px solid black;
 `
 
 const Card = ({ data }) => {

@@ -11,7 +11,7 @@ const Box = styled.div`
     background: #b8dbff;
     position: relative;
 
-    border: 2px solid #000000;
+    border-radius: 5px;
 `
 
 const Header = styled.h3`

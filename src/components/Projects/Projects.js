@@ -36,8 +36,8 @@ const Projects = () => {
         goals: {
             image: '/img/goals-www.png', // trello?
             appName: 'Goals',
-            desc: 'The app revolves around a game a coworker of mine played with his friends. The idea is that there is a list of roughly 40 goals each of the players are striving to complete in their day to day lifes that will slowly improve their life. Once a player finishes a goal, they can log their goal and time on the group\'s page. At the end of each week and month, all goals are stored and the player with the most points logged for that week/month wins. ',
-            features: [ 'React/GraphQL Hosted on Heroku', 'Using mlab.com to host DB' ],
+            desc: 'The app revolves around a game a coworker of mine played with his friends. The idea is that there is a list of roughly 40 goals each of the players are striving to complete in their day to day lives that will slowly improve their life. Once a player finishes a goal, they can log their goal and time on the group\'s page. At the end of each week and month, all goals are stored and the player with the most points logged for that week/month wins. ',
+            features: [ 'React/GraphQL Hosted on Heroku', 'Full user authentication system', 'Using mlab.com to host DB' ],
             challenges: 'I had never created a full stack app of this size with GraphQL as the main API opposed to an Express REST API.',
             techUsed: [ 'ReactJS', 'Node.js', 'GraphQL', 'MongoDB', 'Heroku', 'Trello' ],
             herokuLink: undefined,
@@ -48,18 +48,18 @@ const Projects = () => {
             image: '/img/goals-www.png',
             appName: 'Goals-www',
             desc: 'This is the React implementation of the entire Goals project.',
-            features: ['Full user authentication system', 'Apollo GraphQL Client'],
+            features: ['Apollo GraphQL Client'],
             challenges: 'The React code it littered with evidence of me slowly learning how to wire up an efficient Apollo-Client app, specifically learning the apollo hooks library in order to hit my API. I am also not gifted on creating stylish components on the fly; Due to this, I feel the front end is due for a much makeover now that the core functionality is in place.',
-            techUsed: [ 'React-Router', 'Formik', 'Styled-Components', 'Redux'],
+            techUsed: [ 'React-Router', 'Formik', 'Styled-Components', 'Redux', 'semantic-ui'],
             herokuLink: 'http://goals-www.herokuapp.com/',
             githubLink: 'https://github.com/Ryan-Haig12/goals-www'
         },
         'goals-graphql': {
             image: '/img/goals-graphql.png',
             appName: 'Goals-GraphQL',
-            desc: 'This is the GraphQL implementation of the entire Goals Project.',
-            features: [''],
-            challenges: 'The two hardest implementations I had on this project was setting up the authentication system for every single endpoint and the subscription written to implement the IM chat system.',
+            desc: 'This is the GraphQL implementation of the entire Goals Project. I genuinely enjoyed developing my first GraphQL project after taking a few related courses on Udemy. The company I was working for when I was developing this were heavily investing in GraphQL services. Being able to work on this web service while I tested code, behavior, and queries at work was a great real world learning experience.',
+            features: ['Interactive playground'],
+            challenges: 'The subscription endpoint written to implement the IM chat system was challenging to get to work with Heroku in production. The roadblock I was presented with taught me a lot about the concept of web sockets and real world solutions to a constant data stream sent to the client.',
             techUsed: ['graphql-yoga', 'JSON Web Tokens', 'mongoose' ],
             herokuLink: 'https://goals-graphql.herokuapp.com/',
             githubLink: 'https://github.com/Ryan-Haig12/goals-graphql'
@@ -75,14 +75,34 @@ const Projects = () => {
             githubLink: 'https://github.com/Ryan-Haig12/react-covid-tracker'
         }, 
         'memory-game': {
-            image: undefined,
+            image: '/img/memory-game.png',
             appName: 'Memory-Game',
             desc: 'Remember to Push Memory-Game to heroku and complete this portion',
-            features: [''],
-            challenges: '',
-            techUsed: [''],
-            herokuLink: '',
-            githubLink: ''
+            features: ['Powered by Giphy'],
+            challenges: 'The actual logic of the game was easily the most time consuming part. Wiring up the hooks wasn\'t difficult, but properly setting up the guess/click handlers accordingly took some work and is admittedly not the cleanest solution.',
+            techUsed: ['react-bootstrap', 'Giphy API'],
+            herokuLink: 'https://memory-game-haig.herokuapp.com/',
+            githubLink: 'https://github.com/Ryan-Haig12/memory-game'
+        },
+        'fantasy-basketball': {
+            image: '/img/fantasy-basketball.png',
+            appName: 'Fantasy-Basketball',
+            desc: 'Playing fantasy basketball online is one of my favorite obsessions. After finding a real time NBA API I decided to throw myself into creating my own implementation of a fantasy basketball application. The complex system of drafting, leagues, players data, etc has more or less been implemented in the backend. The frontend, sadly, never got the love it deserved.',
+            features: ['Full authentication system', 'Gravatar user images'],
+            challenges: 'As I wrote more and more backend Node.js code, I discovered this API I was paying $15 a month for had wildly inconsistent data. For instance, if a player scored 15 points last Wednesday, the API would more than likely give me data for the wrong game or not have the specific game data at all. I decided to drop the project when I found the best alternative service was $100 a month. I am sad that I will likely not put effort into this project for the forseeable future, but I am very proud of the backend service I created here.',
+            techUsed: ['Node.js', 'Express', 'NBA API through RapidAPI', 'React', 'Redux'],
+            herokuLink: 'https://fantasy-basketball-haig-turley.herokuapp.com',
+            githubLink: 'https://github.com/Shadowinnothing/FantasyBasketball'
+        },
+        'udemy-courses': {
+            image: '/img/shadowinnothing-github.png',
+            appName: 'Udemy-Courses',
+            desc: 'I used an alternate github account on a handful of the MERN stack courses I took on Udemy. Back in the days when this code was written, I would work my day job of keeping track of a handful of commercial properties in Boulder, Colorado. After work every day I was either working through Udemy courses or trying to make my way into the software culture of the town as a autodidact developer.',
+            features: ['8 Different MERN stack projects worked on by myself prior to employment', 'Fantasy Basketball Project'],
+            challenges: 'I did not learn git early enough in my developing journey. I would have really enjoying storing more Udemy projects in this github account to represent what I had practiced/learned more. However, I was simply to novice at the time to understand that there is benefit to saving my code elsewhere from my laptop.',
+            techUsed: ['ReactJS', 'Node.js', 'GraphQL', 'MongoDB', 'Heroku', 'Trello'],
+            herokuLink: undefined,
+            githubLink: 'https://github.com/Shadowinnothing'          
         }
     }
 
