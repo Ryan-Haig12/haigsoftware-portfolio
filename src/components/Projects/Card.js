@@ -4,10 +4,10 @@ import { Header, Grid, Divider } from 'semantic-ui-react'
 
 const ProjectCard = styled.div`
     background: #b8dbff;
-    height: 80vh;
     margin: 5px;
     padding: 5px;
     font-size: 2vh;
+    border-radius: 5px;
 `
 
 const Card = ({ data }) => {
@@ -64,6 +64,7 @@ const Card = ({ data }) => {
                     })}</p>            
                 </Grid.Column>
             </Grid>
+
             <Divider />
 
             { note !== undefined && <h3>See Goals-www or Goals-GraphQL above for code</h3> }

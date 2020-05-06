@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { Button } from 'semantic-ui-react'
 
 import Card from './Card'
 
@@ -7,6 +8,12 @@ const StyledProjects = styled.div`
     font-size: 2vh;
     background: #5eaeff;
     width: 70%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+    @media (max-width: 600) {
+        color: red;
+    }
 `
 
 const ProjectsHeader = styled.h1`
@@ -19,13 +26,7 @@ const ProjectsHeader = styled.h1`
 
 const ProjectLink = styled.h3`
     display: inline;
-    cursor: pointer;
-    border-bottom: 1px solid black;
     margin: 5px;
-
-    :hover {
-        color: red;
-    }
 `
 
 const Projects = () => {
@@ -95,23 +96,27 @@ const Projects = () => {
         setCurrentProject(e.toLowerCase())
     }
 
-    const indvProject = () => {
-        let projs = []
+    const renderAllProjects = () => {
+        let projects = []
         for(let c in cards) {
-            projs.push(
-                <ProjectLink key={ c } onClick={ () => onClickHandler(cards[c].appName) } >
-                    { cards[c].appName }
-                </ProjectLink>
+            projects.push(
+                <Button primary style={{ padding: '10px', margin: '5px' }} onClick={ () => onClickHandler(cards[c].appName) } key={ c } >
+                    <ProjectLink key={ c } >
+                        { cards[c].appName }
+                    </ProjectLink>
+                </Button>
             )
         }
-        return projs
+        return projects
     }
 
     return (
-        <StyledProjects className="ui center aligned container" style={{ padding: '5px' }} >
-            <ProjectsHeader>Projects</ProjectsHeader>
-            <p style={{ marginTop: '20px' }}>{ indvProject() }</p>
-            { getCard(currentProject) }
+        <StyledProjects className="ui center aligned container">
+            <div style={{ padding: '5px' }}>
+                <ProjectsHeader>Projects</ProjectsHeader>
+                <p style={{ marginTop: '20px' }}>{ renderAllProjects() }</p>
+                { getCard(currentProject) }
+            </div>
         </StyledProjects>
     )
 }
