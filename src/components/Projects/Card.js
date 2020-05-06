@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Header, Grid, Divider } from 'semantic-ui-react'
 
+import useWindowSize from '../../hooks/useWindowSize'
+
 const ProjectCard = styled.div`
     background: #b8dbff;
     margin: 5px;
@@ -12,6 +14,7 @@ const ProjectCard = styled.div`
 
 const Card = ({ data }) => {
     const { image, appName, desc, features, challenges, techUsed, herokuLink, githubLink, note } = data
+    const [ height ] = useWindowSize()
     
     return (
         <ProjectCard className="ui center aligned container" style={{ width: '95%' }} >
@@ -34,12 +37,12 @@ const Card = ({ data }) => {
                 </Grid.Column>
             </Grid>
 
-            <Grid columns={ 3 } divided style={{ paddingTop: '2vh', paddingLeft: '5vh' }}>
-                <Grid.Column width={ 4 } >
+            <Grid columns={ height > 800 ? 3 : 1 } >
+                <Grid.Column>
                     <Header as='h3'>Features</Header>
                     <p>{ features.map(f => {
                         return (
-                            <div style={{ float: 'left' }}>
+                            <div>
                                 <i className="small icon tag"></i>
                                 { f }
                             </div>
@@ -47,14 +50,14 @@ const Card = ({ data }) => {
                     })}</p>
                 </Grid.Column>
 
-                <Grid.Column width={ 8 }>
+                <Grid.Column>
                     <Header as='h3'>Challenges</Header>
                     <p>{ challenges }</p>
                 </Grid.Column>
 
-                <Grid.Column width={ 3 }>
+                <Grid.Column>
                     <Header as='h3'>Tech Used</Header>
-                    <p style={{ margin: '3px' }} >{ techUsed.map(t => {
+                    <p>{ techUsed.map(t => {
                         return (
                             <div style={{ float: 'center' }}>
                                 <i className="small icon tag"></i>

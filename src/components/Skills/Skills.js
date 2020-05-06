@@ -11,7 +11,7 @@ const Box = styled.div`
     background: #b8dbff;
     position: relative;
 
-    border-radius: 4px;
+    border: 2px solid #000000;
 `
 
 const Header = styled.h3`
@@ -20,7 +20,7 @@ const Header = styled.h3`
 
 const Skills = () => {
     return (
-        <div style={{ background: '#b8dbff', margin: '5px', borderRadius: '5px' }}>
+        <div style={{ background: '#b8dbff', margin: '5px' }}>
             <Reveal style={{ width: '70%' }} >
                 <Segment className="ui center aligned container"  style={{ background: '#5eaeff' }} >
 
