@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Header, Grid, Divider } from 'semantic-ui-react'
+import { Header, Grid, Divider, Button } from 'semantic-ui-react'
 
 import useWindowSize from '../../hooks/useWindowSize'
 
@@ -16,6 +16,13 @@ const ProjectCard = styled.div`
 const Card = ({ data }) => {
     const { image, appName, desc, features, challenges, techUsed, herokuLink, githubLink, note } = data
     const [ height ] = useWindowSize()
+
+    // this is for a semantic-ui component or I would make this a styled component
+    const buttonStyle = {
+        padding: 'auto',
+        margin: '20px',
+        display: 'inline-block'
+    }
     
     return (
         <ProjectCard className="ui center aligned container" style={{ width: '95%' }} >
@@ -72,8 +79,8 @@ const Card = ({ data }) => {
             <Divider />
 
             { note !== undefined && <h3>See Goals-www or Goals-GraphQL above for code</h3> }
-            { herokuLink !== undefined && <h3><a href={ herokuLink }>View App in Browser</a></h3> }
-            { githubLink !== undefined && <h3><a href={ githubLink }>View Code on Github</a></h3> }
+            { herokuLink !== undefined && <a href={ herokuLink }><Button primary style={ buttonStyle } >View App in Browser</Button></a> }
+            { githubLink !== undefined && <a href={ githubLink }><Button primary style={ buttonStyle } >View Code on Github</Button></a> }
         </ProjectCard>
     )
 }

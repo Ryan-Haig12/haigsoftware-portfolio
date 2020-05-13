@@ -29,6 +29,11 @@ const ProjectLink = styled.h3`
     margin: 5px;
 `
 
+const ProjectsBackground = styled.div`
+    padding: 5px;
+    padding-bottom: 100px;
+`
+
 const Projects = () => {
     const [ currentProject, setCurrentProject ] = useState('goals')
      
@@ -132,11 +137,11 @@ const Projects = () => {
 
     return (
         <StyledProjects className="ui center aligned container">
-            <div style={{ padding: '5px' }}>
+            <ProjectsBackground>
                 <ProjectsHeader>Projects</ProjectsHeader>
                 <p style={{ marginTop: '20px' }}>{ renderAllProjects() }</p>
                 { getCard(currentProject) }
-            </div>
+            </ProjectsBackground>
         </StyledProjects>
     )
 }
