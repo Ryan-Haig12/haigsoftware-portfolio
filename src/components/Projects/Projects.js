@@ -65,7 +65,7 @@ const Projects = () => {
             desc: 'This is the GraphQL implementation of the entire Goals Project. I genuinely enjoyed developing my first GraphQL project after taking a few related courses on Udemy. The company I was working for when I was developing this were heavily investing in GraphQL services. Being able to work on this web service while I tested code, behavior, and queries at work was a great real world learning experience.',
             features: ['Interactive playground'],
             challenges: 'The subscription endpoint written to implement the IM chat system was challenging to get to work with Heroku in production. The roadblock I was presented with taught me a lot about the concept of web sockets and real world solutions to a constant data stream sent to the client.',
-            techUsed: ['graphql-yoga', 'JSON Web Tokens', 'mongoose' ],
+            techUsed: ['graphql-yoga', 'JSON Web Tokens', 'MongooseJS' ],
             herokuLink: 'https://goals-graphql.herokuapp.com/',
             githubLink: 'https://github.com/Ryan-Haig12/goals-graphql'
         },
@@ -82,9 +82,9 @@ const Projects = () => {
         'memory-game': {
             image: '/img/memory-game.png',
             appName: 'Memory-Game',
-            desc: 'Remember to Push Memory-Game to heroku and complete this portion',
-            features: ['Powered by Giphy'],
-            challenges: 'The actual logic of the game was easily the most time consuming part. Wiring up the hooks wasn\'t difficult, but properly setting up the guess/click handlers accordingly took some work and is admittedly not the cleanest solution.',
+            desc: 'My personal take on the classic memory card game, concentration. The user is prompted to make a search for any topic they desire. Their search result is used in a GET request to get 25 related gifs from Giphy.com. Those gifs are used as the \'card image\' for all cards in the game and are shown when the card is flipped.',
+            features: ['Powered by Giphy', 'react-reveal'],
+            challenges: 'The actual logic of the game was easily the most time consuming part, creating the game from scratch was as frustrating as it was enjoyable to work on. In addition, mobile development has proven to be a difficult task and is still a work in progress.',
             techUsed: ['react-bootstrap', 'Giphy API'],
             herokuLink: 'https://memory-game-haig.herokuapp.com/',
             githubLink: 'https://github.com/Ryan-Haig12/memory-game'
@@ -95,7 +95,7 @@ const Projects = () => {
             desc: 'Playing fantasy basketball online is one of my favorite obsessions. After finding a real time NBA API I decided to throw myself into creating my own implementation of a fantasy basketball application. The complex system of drafting, leagues, players data, etc has more or less been implemented in the backend. The frontend, sadly, never got the love it deserved.',
             features: ['Full authentication system', 'Gravatar user images'],
             challenges: 'As I wrote more and more backend Node.js code, I discovered this API I was paying $15 a month for had wildly inconsistent data. For instance, if a player scored 15 points last Wednesday, the API would more than likely give me data for the wrong game or not have the specific game data at all. I decided to drop the project when I found the best alternative service was $100 a month. I am sad that I will likely not put effort into this project for the forseeable future, but I am very proud of the backend service I created here.',
-            techUsed: ['Node.js', 'Express', 'NBA API through RapidAPI', 'React', 'Redux'],
+            techUsed: ['NBA API through RapidAPI', 'Node.js', 'Express', 'React', 'Redux',  'MongoDB'],
             herokuLink: 'https://fantasy-basketball-haig-turley.herokuapp.com',
             githubLink: 'https://github.com/Shadowinnothing/FantasyBasketball'
         },
@@ -103,7 +103,7 @@ const Projects = () => {
             image: '/img/shadowinnothing-github.png',
             appName: 'Udemy-Courses',
             desc: 'I used an alternate github account on a handful of the MERN stack courses I took on Udemy. Back in the days when this code was written, I would work my day job of keeping track of a handful of commercial properties in Boulder, Colorado. After work every day I was either working through Udemy courses or trying to make my way into the software culture of the town as a autodidact developer.',
-            features: ['8 Different MERN stack projects worked on by myself prior to employment', 'Fantasy Basketball Project'],
+            features: ['8 Different MERN stack projects worked on by myself prior to and during my QA employment', 'Fantasy Basketball Project'],
             challenges: 'I did not learn git early enough in my developing journey. I would have really enjoying storing more Udemy projects in this github account to represent what I had practiced/learned more. However, I was simply to novice at the time to understand that there is benefit to saving my code elsewhere from my laptop.',
             techUsed: ['ReactJS', 'Node.js', 'GraphQL', 'MongoDB', 'Heroku', 'Trello'],
             herokuLink: undefined,
@@ -139,6 +139,7 @@ const Projects = () => {
         <StyledProjects className="ui center aligned container">
             <ProjectsBackground>
                 <ProjectsHeader>Projects</ProjectsHeader>
+                <p style={{ padding: 'auto', margin: '10px' }} >These projects are all hosted on Heroku using a free dyno. Due to this, viewing an app in browser may take up to 20 seconds to load</p>
                 <p style={{ marginTop: '20px' }}>{ renderAllProjects() }</p>
                 { getCard(currentProject) }
             </ProjectsBackground>
