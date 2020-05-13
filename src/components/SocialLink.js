@@ -5,16 +5,15 @@ const SocialLink = ({ url, style, color }) => {
     const [ iconColor, setIconColor ] = useState(color)
 
     return (
-        <div>
-            <SocialIcon
-                url={ url }
-                style={ style }
-                bgColor={ iconColor }
-                fgColor={ 'white' }
-                onMouseEnter={ () => setIconColor('#5eaeff') }
-                onMouseLeave={ () => setIconColor(color) }
-            />
-        </div>
+        <SocialIcon
+            url={ url }
+            key={ url }
+            style={ style }
+            bgColor={ iconColor }
+            fgColor={ 'white' }
+            onMouseEnter={ () => setIconColor('#5eaeff') }
+            onMouseLeave={ () => setIconColor(color) }
+        />
     )
 }
 

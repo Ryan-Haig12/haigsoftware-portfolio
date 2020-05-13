@@ -48,14 +48,14 @@ const Card = ({ data }) => {
             <Grid columns={ height > 800 ? 3 : 1 } >
                 <Grid.Column>
                     <Header as='h3'>Features</Header>
-                    <p>{ features.map(f => {
+                    { features.map(f => {
                         return (
-                            <div>
+                            <div key={ f } >
                                 <i className="small icon tag"></i>
                                 { f }
                             </div>
                         )
-                    })}</p>
+                    })}
                 </Grid.Column>
 
                 <Grid.Column>
@@ -65,14 +65,14 @@ const Card = ({ data }) => {
 
                 <Grid.Column>
                     <Header as='h3'>Tech Used</Header>
-                    <p>{ techUsed.map(t => {
+                    { techUsed.map(t => {
                         return (
-                            <div style={{ float: 'center' }}>
+                            <div key={ t } style={{ float: 'center' }}>
                                 <i className="small icon tag"></i>
                                 { t }
                             </div>
                         )
-                    })}</p>            
+                    })}         
                 </Grid.Column>
             </Grid>
 

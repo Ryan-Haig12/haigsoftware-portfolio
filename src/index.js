@@ -6,9 +6,7 @@ import App from './App'
 import 'semantic-ui-css/semantic.min.css'
 
 const jsx = (
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <App />
 )
 
 ReactDOM.render( jsx, document.getElementById('root') )

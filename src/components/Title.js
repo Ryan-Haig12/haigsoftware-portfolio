@@ -61,7 +61,7 @@ const Title = () => {
 
         let socialLinkComponents = []
         for(let media in socialData) {
-            socialLinkComponents.push( <SocialLink url={ socialData[media].url } color={ socialData[media].color } style={ sty } /> )
+            socialLinkComponents.push( <SocialLink key={ socialData[media].url } url={ socialData[media].url } color={ socialData[media].color } style={ sty } /> )
         }
 
         return socialLinkComponents
