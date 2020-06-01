@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import resume from '../pdf/resume.pdf'
+import resume from '../pdf/RyanHaigResume.pdf'
 
 const StyledFooter = styled.div`
     font-size: 2vh;

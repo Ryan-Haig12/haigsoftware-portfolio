@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import LightSpeed from 'react-reveal/LightSpeed'
 import SocialLink from './SocialLink'
 
-import resume from '../pdf/resume.pdf'
+import resume from '../pdf/RyanHaigResume.pdf'
 import useWindowSize from '../hooks/useWindowSize'
 
 const StyledTitle = styled.span`
