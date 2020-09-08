@@ -35,9 +35,19 @@ const ProjectsBackground = styled.div`
 `
 
 const Projects = () => {
-    const [ currentProject, setCurrentProject ] = useState('goals')
+    const [ currentProject, setCurrentProject ] = useState('calorie-counter-node')
      
     const cards = {
+        'calorie-counter-node': {
+            image: '/img/calorie-counter-node.png', 
+            appName: 'Calorie-Counter-Node',
+            desc: 'This is a backend Node.js/Express project that offers a way for users to track their calorie intake as well as their exercise habits. The application doubles as a social network and will allow users to share food/exercise goals and accomplishments with their friends. A React front end is in development and on it\'s way!',
+            features: [ 'Full user authentication system using JWT', 'ElephantSQL.com database', 'Full Swagger documentation' ],
+            challenges: 'This application was originally written in Typescript using the brand new Deno runtime environment when Deno 1.0 was released. I slowly discovered that Deno was not as well supported by third party services, such as Heroku, to create a stable ws. Thus, the entire ws had to be converted to JavaScript/Node.',
+            techUsed: [ 'Node.js', 'Express', 'PostgreSQL', 'Swagger', 'JWT' ],
+            herokuLink: undefined,
+            githubLink: 'https://github.com/Ryan-Haig12/calorie-counter-node',
+        },
         goals: {
             image: '/img/goals-www.png', // trello?
             appName: 'Goals',
